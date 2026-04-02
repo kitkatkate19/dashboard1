@@ -3,7 +3,11 @@
   "name": "kbi-platform",
   "compatibility_date": "2024-11-01",
   "compatibility_flags": ["nodejs_compat"],
-  "pages_build_output_dir": "./dist"
+  "pages_build_output_dir": "./dist",
+
+  "vars": {
+    "PLATFORM_DOMAIN": "https://kbi-platform.pages.dev"
+  }
 
   /*
   ,
@@ -14,14 +18,12 @@
       "database_id": "575e91db-2113-4610-9f58-3ead89c76adf"
     }
   ],
-
   "r2_buckets": [
     {
       "binding": "kbi-platform-files",
       "bucket_name": "kbi-platform-files"
     }
   ],
-
   "kv_namespaces": [
     {
       "binding": "kbi-sessions",
