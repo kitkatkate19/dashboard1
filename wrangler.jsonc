@@ -12,7 +12,7 @@
     {
       "binding": "DB",
       "database_name": "kbi-platform-production",
-      "database_id": "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+      "database_id": "d455bdb3-76a0-4b97-a40f-1501fad4b45a"
     }
   ],
 
