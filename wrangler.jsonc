@@ -3,11 +3,10 @@
   "name": "kbi-platform",
   "compatibility_date": "2024-11-01",
   "compatibility_flags": ["nodejs_compat"],
-  "pages_build_output_dir": "./dist",
+  "pages_build_output_dir": "./dist"
 
-  // ── D1 Database ──────────────────────────────────────────────────────────────
-  // Create with: npx wrangler d1 create kbi-platform-production
-  // Then replace REPLACE_WITH_YOUR_D1_DATABASE_ID with the output id
+  /*
+  ,
   "d1_databases": [
     {
       "binding": "kbi_platform_production",
@@ -16,8 +15,6 @@
     }
   ],
 
-  // ── R2 Bucket (file attachments) ─────────────────────────────────────────────
-  // Create with: npx wrangler r2 bucket create kbi-platform-files
   "r2_buckets": [
     {
       "binding": "kbi-platform-files",
@@ -25,14 +22,11 @@
     }
   ],
 
-  // ── KV Namespace (session tokens) ────────────────────────────────────────────
-  // Create with: npx wrangler kv namespace create kbi_sessions
-  // Create preview: npx wrangler kv namespace create kbi_sessions --preview
-  // Replace both IDs below
   "kv_namespaces": [
     {
       "binding": "kbi-sessions",
       "id": "1148bb8c00234e4298cf67e8d74691e7"
     }
   ]
+  */
 }
