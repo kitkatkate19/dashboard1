@@ -31,7 +31,7 @@
   // Replace both IDs below
   "kv_namespaces": [
     {
-      "binding": "kbi_sessions",
+      "binding": "kbi-sessions",
       "id": "1148bb8c00234e4298cf67e8d74691e7"
     }
   ]
