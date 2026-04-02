@@ -9,7 +9,6 @@
     "PLATFORM_DOMAIN": "https://kbi-platform.pages.dev"
   }
 
-  /*
   ,
   "d1_databases": [
     {
@@ -30,5 +29,4 @@
       "id": "1148bb8c00234e4298cf67e8d74691e7"
     }
   ]
-  */
 }
