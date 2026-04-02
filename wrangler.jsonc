@@ -10,9 +10,9 @@
   // Then replace REPLACE_WITH_YOUR_D1_DATABASE_ID with the output id
   "d1_databases": [
     {
-      "binding": "DB",
+      "binding": "kbi_platform_production",
       "database_name": "kbi-platform-production",
-      "database_id": "d455bdb3-76a0-4b97-a40f-1501fad4b45a"
+      "database_id": "ac173680-cca5-4d6d-b99e-70aa98fa3210"
     }
   ],
 
@@ -20,7 +20,7 @@
   // Create with: npx wrangler r2 bucket create kbi-platform-files
   "r2_buckets": [
     {
-      "binding": "R2",
+      "binding": "kbi-platform-files",
       "bucket_name": "kbi-platform-files"
     }
   ],
@@ -31,8 +31,8 @@
   // Replace both IDs below
   "kv_namespaces": [
     {
-      "binding": "KV",
-      "id": "03c14c3b17534c45bea063e06d52b204"
+      "binding": "kbi_sessions",
+      "id": "084b8f56c09a41ad8f846627de67fcd4"
     }
   ]
 }
