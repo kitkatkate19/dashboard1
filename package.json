@@ -1,0 +1,40 @@
+{
+  "name": "kbi-platform",
+  "version": "3.0.0",
+  "type": "module",
+  "description": "KBI Internal Operations Platform — Phase 1 + Phase 2 + Phase 3",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "wrangler pages dev dist",
+    "dev:sandbox": "wrangler pages dev dist --ip 0.0.0.0 --port 3000",
+    "dev:d1": "wrangler pages dev dist --d1=kbi-platform-production --local --ip 0.0.0.0 --port 3000",
+    "deploy": "npm run build && wrangler pages deploy dist --project-name kbi-platform",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings",
+    "db:migrate:local": "wrangler d1 migrations apply kbi-platform-production --local",
+    "db:migrate:prod": "wrangler d1 migrations apply kbi-platform-production",
+    "db:seed:p1": "wrangler d1 execute kbi-platform-production --local --file=./migrations/0002_seed_data.sql",
+    "db:seed:p2": "wrangler d1 execute kbi-platform-production --local --file=./migrations/0004_phase2_seed.sql",
+    "db:seed:p3": "wrangler d1 execute kbi-platform-production --local --file=./migrations/0007_phase3_seed.sql",
+    "db:seed": "npm run db:seed:p1 && npm run db:seed:p2 && npm run db:seed:p3",
+    "db:migrate:p3": "wrangler d1 execute kbi-platform-production --local --file=./migrations/0006_phase3_intelligence.sql",
+    "db:migrate:p3:prod": "wrangler d1 execute kbi-platform-production --file=./migrations/0006_phase3_intelligence.sql",
+    "db:reset": "rm -rf .wrangler/state/v3/d1 && npm run db:migrate:local && npm run db:seed",
+    "db:console:local": "wrangler d1 execute kbi-platform-production --local",
+    "db:console:prod": "wrangler d1 execute kbi-platform-production",
+    "setup": "npm run db:migrate:local && npm run db:seed",
+    "clean": "rm -rf dist .wrangler/tmp"
+  },
+  "dependencies": {
+    "@hono/vite-cloudflare-pages": "^0.4.3",
+    "hono": "^4.12.9"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250313.0",
+    "@hono/vite-build": "^1.2.0",
+    "@hono/vite-dev-server": "^0.18.2",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "wrangler": "^4.4.0"
+  }
+}
