@@ -12,7 +12,7 @@
     {
       "binding": "kbi_platform_production",
       "database_name": "kbi-platform-production",
-      "database_id": "ac173680-cca5-4d6d-b99e-70aa98fa3210"
+      "database_id": "575e91db-2113-4610-9f58-3ead89c76adf"
     }
   ],
 
@@ -32,7 +32,7 @@
   "kv_namespaces": [
     {
       "binding": "kbi_sessions",
-      "id": "084b8f56c09a41ad8f846627de67fcd4"
+      "id": "1148bb8c00234e4298cf67e8d74691e7"
     }
   ]
 }
